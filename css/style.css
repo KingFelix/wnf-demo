@@ -1,0 +1,265 @@
+/* 
+ * Wired Next Fest 2015 Demo 
+ * by GDG Milano
+ * http://www.gdgmilano.org
+ * Author: Jacopo Rabolini
+ * Revision: Alberto Congiu
+ */
+
+/* -- Azzeriamo padding e margini di tutti gli elementi -- */
+
+* {
+	margin:0; 
+	padding: 0;
+}
+
+
+/* -- Impostiamo la tipografica di base -- */
+
+@font-face {
+	font-family: 'RobotoSlab';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../font/RobotoSlab-Thin.ttf');
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../font/RobotoSlab-Bold.ttf');
+}
+
+html {
+	font-family: 'RobotoSlab', serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 24px;
+	margin-bottom: 48px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+
+h3, h4, h5, h6 {
+	font-size: 21px;
+	line-height: 24px;
+	margin-bottom: 24px;
+	background-color: #ffed00;
+	display: inline-block;
+}
+
+img {
+	margin-bottom: 24px;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
+}
+
+
+/* -- Layout di base -- */
+
+.clear {
+	clear: both;
+}
+
+.wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	margin-bottom: 24px;
+	border-bottom: 1px solid #c9c9c9;
+	position: fixed;
+	top: 0;
+	width: 960px;
+	background-color: #fff;
+}
+
+header #brand {
+	font: bold 36px/24px 'RobotoSlab', serif;
+	padding: 12px 0;
+	float: left;
+}
+
+header #brand:after {
+	content: '';
+  height: 8px;
+  background-color: #ffed00;
+  width: 100%;
+  display: block;
+}
+
+header #hashtag {
+	float: right;
+  padding: 12px 0;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+main {
+	margin-top: 69px;
+}
+
+.cover {
+	width: 960px;
+}
+
+.day {
+	width: 460px;
+	border: 1px solid #c9c9c9;
+	margin-bottom: 24px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.day:nth-child(odd) {
+	float: left;
+}
+
+.day:nth-child(even) {
+	float: right;
+}
+
+.map {
+	margin-bottom: 24px;
+}
+
+footer {
+	padding: 12px 0;
+	border-top: 1px solid #c9c9c9;
+	text-align: center;
+}
+
+/* -- Layout fluido -- */
+
+/* - Tipografia - */
+
+p {
+	font-size: 1em; /* 18px/18px */
+	line-height: 1.3333333em; /* 24px/18px */
+	margin-bottom: 1.3333333em; /* 24px/18px */ 
+}
+
+h1 {
+	font-size: 2em; /* 36px/18px */
+	line-height: 1.3333333em; /* 48px/36px */
+	margin-bottom: 0.6666666em; /* 24px/36px */
+}
+
+h2 {
+	font-size: 1.3333333em; /* 24px/18px */
+	line-height: 1em; /* 24px/24px */
+	margin-bottom: 1em; /* 24px/24px */
+}
+
+h3, h4, h5, h6 {
+	font-size: 1.166666667em; /* 21px/18px */
+	line-height: 1.1428571429em; /* 24px/21px */
+	margin-bottom: 1.1428571429em; /* 24px/21px */
+}
+
+img {
+	margin-bottom: 1.3333333em; /* 24px/18px */
+}
+
+/* - Layout - */
+
+.wrap {
+	width: 70%;
+}
+
+header {
+	width: 70%;
+	margin-bottom: 1.3333333em; /* 24px/18px */
+}
+
+header #brand {
+	font: bold 2em/0.66666666em 'RobotoSlab', serif;
+	padding: 0.33333333em 0;
+}
+
+header #hashtag {
+  padding: 0.33333333em 0;
+  font-size: 2em;
+}
+
+.cover {
+	width: 100%;
+}
+
+.day {
+	width: 47.175%;
+	margin-bottom: 1.33333333em;
+	padding: 1.11111111em;
+}
+
+.map {
+	margin-bottom: 1.33333333em;
+}
+
+footer {
+	padding: 0.66666666em 0;
+}
+
+/* -- Layout responsive -- */
+
+@media all and (max-width: 960px) { /* Breakpoint */
+
+html {
+	font-size: 16px;
+}
+
+	header {
+		text-align: center;
+	}
+	header #brand {
+		float: none;
+	}
+
+	header #hashtag {
+		float: none;
+	}
+
+	main {
+		margin-top: 100px;
+	}
+
+	.day {
+		width: 100%;
+	}
+
+	.day:nth-child(odd), .day:nth-child(even) {
+		float: none;
+	}
+
+}
