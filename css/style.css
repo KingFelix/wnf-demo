@@ -235,9 +235,9 @@ footer {
 
 @media all and (max-width: 960px) { /* Breakpoint */
 
-html {
-	font-size: 16px;
-}
+  html {
+  	font-size: 16px;
+  }
 
 	header {
 		text-align: center;
